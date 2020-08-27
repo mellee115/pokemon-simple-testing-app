@@ -19,7 +19,7 @@ Enzyme.configure({adapter: new Adapter()});
 jest.mock('axios');
 
 describe('The Pokemon testing App ', () => {
-    //
+    //good practice
     afterEach(() => {
         jest.clearAllMocks();
     });
@@ -33,21 +33,22 @@ describe('The Pokemon testing App ', () => {
 
     //done parameter must be provided
     it('fetches data Mew data through mocking.', (done) => {
-        //2. make the basic mock more specific
+        //4. make the basic mock more specific
         mockAxios.get.mockImplementationOnce(() => Promise.resolve({
             data: mewData
         }));
 
-        //3. carry out the test
-        //Enzyme
+        //5. carry out the test
         wrapper.instance().setMewData();
+        
+        //setImmediate will run a callback function immediately after the browser has completed operations such as events
         setImmediate(() => {
-                //4. update the state so values can get populated
+                //6. update the state so values can get populated
                 wrapper.update();
 
                 //5. set your expectations
                 expect(wrapper.instance().state.mewData).to.equal(mewData);
-                //call done so Jest test can complete
+                //call done so Jest test can complete otherwise timeout will occur
                 done();
             }
         );
