@@ -1,0 +1,85 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+a {
+  color: #61dafb;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-image-float infinite 3s ease-in-out;
+  }
+}
+@keyframes App-image-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.poke-button{
+  margin-bottom: 10px;
+}
+
+hr {
+  width: 0%;
+  min-width: 20%;
+  max-width: 100%;
+  margin: 0 auto;
+  border: none;
+  border-bottom: 1px solid;
+  position: relative;
+  transition: box-shadow 200ms ease-in-out;
+  box-shadow: 0px 0px 0px 0px #f9f9f9;
+}
+
+container{
+  display: inline-grid;
+  grid-gap: 50px;
+  grid-template-columns: auto auto;
+}
+.pokemon-container{
+  width: 25%;
+}
+.test-container{
+  font-size: 11px;
+  font-family: 'courier-new';
+}
+
+.mew-div{
+  font-size: 10px;
+  float: left;
+}
+.ditto-div{
+  float: right;
+  font-size: 10px;
+}
+.corsola-div{
+  font-size: 10px;
+  float: left;
+}
+.unown-div{
+  font-size: 10px;
+  float: right;
+}
