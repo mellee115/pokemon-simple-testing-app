@@ -1,3 +1,9 @@
+## A Simple Pokémon React Testing App
+Retrieve Pokémon data from the PokéAPI
+for testing mocking of axios
+with a ReactJS web component.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

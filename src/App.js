@@ -161,9 +161,9 @@ export class App extends Component {
               </div>
             </container>
             {/*<h3> Test Runner Results </h3>*/}
-            {/*<container className="test-container">*/}
-
-            {/*</container>*/}
+            <container className="test-container">
+              Now let's take a closer look at the code to see what we need to do to accomplish the mocking of Axios!
+            </container>
           </header>
 
           <footer>
