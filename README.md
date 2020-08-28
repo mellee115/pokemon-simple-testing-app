@@ -1,6 +1,6 @@
 ## A Simple Pokémon React Testing App
-Retrieve Pokémon data from the PokéAPI
-for testing mocking of axios
+Retrieve Pokémon data from the [PokéAPI](https://pokeapi.co/)
+for testing mocking of [axios](https://github.com/axios/axios)
 with a ReactJS web component.
 
 
