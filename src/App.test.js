@@ -3,7 +3,6 @@ import {App, setMewData, setDittoData, setCorsolaData, setUnownData} from './App
 import Enzyme, {shallow} from 'enzyme';
 import {expect} from 'chai';
 import Adapter from 'enzyme-adapter-react-16';
-//1. import "axios"
 import axios from 'axios';
 
 //pokemon data
@@ -14,7 +13,7 @@ import {corsolaData} from './corsolaData.js';
 
 Enzyme.configure({adapter: new Adapter()});
 
-//2. this is what signals Jest to use the mocked implementation of axios
+//1. this is what signals Jest to use the mocked implementation of axios
 jest.mock('axios');
 
 describe('The Pokemon testing App ', () => {
@@ -32,20 +31,20 @@ describe('The Pokemon testing App ', () => {
 
     //done parameter must be provided
     it('fetches data Mew data through mocking.', (done) => {
-        //5. make the basic mock more specific
+        //2. make the basic mock more specific
        axios.get.mockImplementation(() => Promise.resolve({
             data: mewData
         }));
 
-        //6. carry out the test
+        //3. carry out the test
         wrapper.instance().setMewData();
 
         //setImmediate will run a callback function immediately after the browser has completed operations such as events
         setImmediate(() => {
-                //7. update the state so values can get populated
+                //4. update the state so values can get populated
                 wrapper.update();
 
-                //8. set your expectations and check
+                //5. set your expectations and check
                 expect(wrapper.instance().state.mewData).to.equal(mewData);
                 //call done so Jest test can complete otherwise timeout will occur
                 done();
